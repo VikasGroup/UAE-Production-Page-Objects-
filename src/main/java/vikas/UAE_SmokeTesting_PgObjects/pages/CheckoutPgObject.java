@@ -8,13 +8,13 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class CheckoutPgObject extends PageObject {
 
-	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[2]/label/input")
+	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[2]/div[1]/label/input")
 	 WebElement chkout1;
 	
-	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[4]/label/input")
+	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[3]/label/input")
 	 WebElement chkout2;
 	
-	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[6]/label/input")
+	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[5]/label/input")
 	 WebElement chkout3;
 	
 	@FindBy(xpath= ".//*[@id='checkout-details-form']/div/div[6]/a[2]")
