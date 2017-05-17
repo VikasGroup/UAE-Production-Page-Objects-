@@ -8,6 +8,8 @@ import com.thoughtworks.selenium.webdriven.commands.Click;
 import net.serenitybdd.core.pages.PageObject;
 
 public class VODashboard extends PageObject{
+	@FindBy(xpath = ".//*[@id='header']/div[1]/div[2]/div[1]/div/a/span[2]")
+	WebElement exproductdel_txt;
 	
 	@FindBy(xpath= ".//*[@id='mainNavi']/ul/li[1]/a")
 	WebElement product_link;
@@ -30,7 +32,7 @@ public class VODashboard extends PageObject{
 	@FindBy(id = "eRdmStore")
 	WebElement redeem_btn;
 	
-	@FindBy(xpath = ".//*[@id='header']/div[1]/div[2]/div[1]/div/a/span[1]")
+	@FindBy(xpath = ".//*[@id='header']/div[1]/div[2]/div[1]/div/a")
 	WebElement shpcart_btn;
 	
 	@FindBy(xpath = ".//*[@id='header']/div[1]/div[2]/div[1]/div/div/div[2]/div/a/span")
@@ -62,13 +64,14 @@ public class VODashboard extends PageObject{
 	}
 	
 	public void emptycart() throws InterruptedException{
-		shpcart_btn.click();
-		if (prodDel_btn.isEnabled()) {
-			prodDel_btn.click();
-			Thread.sleep(2000);
-			shpcart_btn.click();
-		} else {
-			shpcart_btn.click();
+		try {
+			if (Integer.parseInt(exproductdel_txt.getText()) > 0) {
+				shpcart_btn.click();
+				
+				prodDel_btn.click();
+			}
+		} catch (org.openqa.selenium.ElementNotVisibleException e) {
+			// TODO: handle exception
 		}
 	}
 		

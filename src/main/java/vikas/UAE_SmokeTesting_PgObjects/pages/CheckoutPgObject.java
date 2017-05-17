@@ -8,25 +8,25 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class CheckoutPgObject extends PageObject {
 
-	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[2]/label/input")
+	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[2]/div[1]/label/input")
 	 WebElement chkout1;
 	
-	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[4]/label/input")
+	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[3]/label/input")
 	 WebElement chkout2;
 	
-	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[6]/label/input")
+	@FindBy(xpath=".//*[@id='checkout-details-form']/div/div[3]/div[5]/label/input")
 	 WebElement chkout3;
 	
 	@FindBy(xpath= ".//*[@id='checkout-details-form']/div/div[6]/a[2]")
 	 WebElement chkoutsp;
 	
-	@FindBy(xpath=".//*[@id='checkout-shipping-form']/div/div[5]/a")
+	@FindBy(xpath=".//*[@id='checkout-shipping-form']/div/div[4]/a")
 	 WebElement count_btn;
 	
 	@FindBy(xpath=".//*[@id='delivery-8800001541']")
 	 WebElement deliveryOption;
 	
-	@FindBy(xpath=".//*[@id='bv-allocation-table']/div[4]/div[4]/button")
+	@FindBy(xpath=".//*[@id='bv-allocation-table']/div[3]/div[4]/button")
 	 WebElement bvAllo_btn;
 	
 	@FindBy(xpath=".//*[@id='collapseThree']/div[1]/div[3]/button")
